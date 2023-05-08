@@ -1,6 +1,8 @@
 ![Nvim logo](./img/logo.png)
 
-# My Neovim Configuration
+<p align="center">
+    <h1 align="center">My Neovim Configuration</h1>
+</p>
 
 This repository contains my personal configuration for the Neovim text editor. 
 Feel free to use it as a starting point for your own configuration, or just 
