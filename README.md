@@ -17,7 +17,7 @@ pick and choose the settings you like.
 3. Clone this repository into your `~/.config/` directory:
 
 ```sh
-git clone https://github.com/your-username/nvim.git ~/.config/nvim
+git clone https://github.com/Johanx22x/nvim.git ~/.config/nvim
 ```
 
 4. Start Neovim and run :PackerInstall command to install any 
