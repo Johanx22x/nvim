@@ -53,4 +53,4 @@ accept all suggestions.
 
 ## License
 
-This configuration is released under the MIT License.
+This configuration is released under the [MIT License](./LICENSE).
