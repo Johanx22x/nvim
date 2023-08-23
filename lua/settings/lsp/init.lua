@@ -23,7 +23,7 @@ local servers = {
     "jedi_language_server",
     "lua_ls",
     "clangd",
-    "hls",
+    -- "hls",
     "tsserver",
     "jdtls",
     "kotlin_language_server",

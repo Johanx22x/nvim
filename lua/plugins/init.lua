@@ -29,6 +29,9 @@ require("packer").startup(function(use)
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
+    -- fsharp lsp
+    use 'ionide/Ionide-vim'
+
     -- Nvterm
     use "NvChad/nvterm"
 
