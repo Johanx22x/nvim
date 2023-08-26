@@ -8,41 +8,40 @@
 ]]--
 
 -- Treesitter
-require("plugins.setup.treesitter")
+require("plugins.treesitter")
 
 -- Todo comments
-require("plugins.setup.todo-comments")
+require("plugins.todo-comments")
 
 -- Lualine
-require("plugins.setup.lualine")
+require("plugins.lualine")
 
 -- Vimtex 
-require("plugins.setup.vimtex")
+require("plugins.vimtex")
 
 -- Copilot
-require("plugins.setup.copilot")
+-- require("plugins.copilot")
 
 -- cmp
-require("plugins.setup.cmp")
+require("plugins.cmp")
 
 -- nvim tree
-require("plugins.setup.nvim-tree")
+require("plugins.nvim-tree")
 
 -- which key
-require("plugins.setup.which-key")
+require("plugins.which-key")
 
 -- Gitsigns 
-require("plugins.setup.gitsigns")
+require("plugins.gitsigns")
 
 -- NvChad term
-require("plugins.setup.nvchad-term")
+require("plugins.nvchad-term")
 
 -- Markdown preview
-require("plugins.setup.markdown-preview")
+require("plugins.markdown-preview")
 
 -- Bufferline
-vim.opt.termguicolors = true
 require("bufferline").setup{}
 
 -- Live servers
-require("plugins.setup.live-server")
+require("plugins.live-server")

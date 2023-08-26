@@ -20,10 +20,10 @@ require("plugins")
 require("settings")
 
 -- Load keybindings
-require("settings.mappings")
+require("mappings")
 
--- Load plugins setup
+-- Setup plugins
 require("plugins.setup")
 
 -- LSP settings
-require("settings.lsp")
+require("lsp")

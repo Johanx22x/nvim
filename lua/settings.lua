@@ -47,3 +47,6 @@ vim.g.UltiSnipsJumpBackwardTrigger = "<c-z>"
 -- Numbers column
 vim.o.number = true
 vim.o.relativenumber = true
+
+-- Status line
+vim.opt.termguicolors = true
