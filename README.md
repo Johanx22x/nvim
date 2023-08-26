@@ -35,16 +35,18 @@ Linux the package appears as `nvim-packer-git` in the AUR.
 The configuration file is divided into several sections, each with its own 
 set of settings. Here's a brief overview of what's included:
 
-- `settings`: Here are the general Neovim settings such as the color scheme, 
+- `settings.lua`: Here are the general Neovim settings such as the color scheme, 
 transparency, among others.
 
-- `settings/lsp`: LSPs configuration.
+- `lsp.lua`: LSPs configuration.
 
-- `settings/mappings`: The key mapping.
+- `mappings.lua`: The key mapping.
 
-- `plugins`: Here is the list of all the plugins for the Neovim configuration.
+- `plugins/init.lua`: Here is the list of all the plugins for the Neovim configuration.
 
-- `plugins/setup`: Specific settings for each plugin.
+- `plugins/setup.lua`: Load specific settings for each plugin.
+
+- `plugins/<plugin-name>.lua`: Plugin configuration.
 
 ## Contributing 
 
