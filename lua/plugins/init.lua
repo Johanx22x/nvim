@@ -123,9 +123,6 @@ require("packer").startup(function(use)
     -- Java lsp
     use 'mfussenegger/nvim-jdtls'
 
-    -- Tree
-    use "preservim/nerdtree"
-
     -- install without yarn or npm
     use({
         "iamcco/markdown-preview.nvim",
@@ -138,7 +135,6 @@ require("packer").startup(function(use)
       requires = {
         'nvim-tree/nvim-web-devicons', -- optional, for file icons
       },
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
     -- Discord
