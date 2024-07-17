@@ -39,32 +39,11 @@ map('v', '<C-c>', '"+y', options)
 -- Nvim tree toggle
 keyset('n', '<leader>e', ':NvimTreeToggle<CR>', options)
 
--- Telescope keybindings
-local builtin = require('telescope.builtin')
-keyset('n', '<leader>ff', builtin.find_files, {})
-keyset('n', '<leader>fg', builtin.live_grep, {})
-keyset('n', '<leader>fb', builtin.buffers, {})
-keyset('n', '<leader>fh', builtin.help_tags, {})
-keyset('n', '<leader>tm', builtin.colorscheme, {})
-
--- Telescope git
-keyset('n', '<leader>gs', builtin.git_status, {})
-keyset('n', '<leader>gc', builtin.git_commits, {})
-keyset('n', '<leader>gb', builtin.git_branches, {})
-
--- Telescope treesitter
-keyset('n', '<leader>tt', builtin.treesitter, {})
-
 -- Vimtex
 keyset("n", "<leader>q", ":!zathura <C-r>=expand('%:r')<cr>.pdf &<cr>")
 keyset("n", "<leader>l", ":VimtexCompile<cr>")
 keyset("n", "<leader>ce", ":Copilot enable<cr>")
 keyset("n", "<leader>cd", ":Copilot disable<cr>")
-
--- Markdown preview 
-keyset("n", "<leader>mp", ":MarkdownPreview<cr>")
-keyset("n", "<leader>ms", ":MarkdownPreviewStop<cr>")
-keyset("n", "<leader>mm", ":MarkdownPreviewToggle<cr>")
 
 -- Live server
 keyset("n", "<leader>ls", ":LiveServer <cr>")
@@ -92,60 +71,19 @@ keyset("t", "<leader>th", hTerm, {})
 -- Which key
 local wk = require("which-key")
 
-wk.register({
-    ["<leader>"] = {
-        name = "Leader",
-        e = "Explorer",
-        f = "Telescope",
-        g = "Git",
-        t = "Treesitter, Themes and Terminal",
-        q = "Zathura",
-        l = "Latex compile",
-        c = "Copilot",
-    },
-    ["<leader>f"] = {
-        name = "Telescope",
-        f = "Find files",
-        g = "Live grep",
-        b = "Buffers",
-        h = "Help tags",
-    },
-    ["<leader>g"] = {
-        name = "Git",
-        s = "Git status",
-        c = "Git commits",
-        b = "Git branches",
-    },
-    ["<leader>t"] = {
-        name = "Treesitter, Themes and Terminal",
-        t = "Treesitter",
-        m = "Colorscheme",
-        f = "Float terminal",
-        v = "Vertical terminal",
-        h = "Horizontal terminal",
-    },
-    ["<leader>c"] = {
-        name = "Copilot",
-        e = "Enable",
-        d = "Disable",
-    },
-    ["<leader>l"] = {
-        name = "Latex",
-        q = "Zathura",
-        l = "Latex compile",
-    },
-    ["<leader>q"] = {
-        name = "Zathura",
-        q = "Zathura",
-    },
-    ["<leader>mp"] = {
-        name = "Markdown preview",
-        p = "Markdown preview",
-        s = "Markdown preview stop",
-        m = "Markdown preview toggle",
-    },
-    ["<leader>ls"] = {
-        name = "Live server",
-        s = "Live server",
-    },
+wk.add({
+    { "<leader>", group = "Leader" },
+    { "<leader>c", desc = "Copilot" },
+    { "<leader>cd", desc = "Disable" },
+    { "<leader>ce", desc = "Enable" },
+    { "<leader>e", desc = "Explorer" },
+    { "<leader>l", desc = "Latex compile" },
+    { "<leader>m", group = "Markdown preview" },
+    { "<leader>q", desc = "Zathura" },
+    { "<leader>t", group = "Treesitter, Themes and Terminal" },
+    { "<leader>tf", desc = "Float terminal" },
+    { "<leader>th", desc = "Horizontal terminal" },
+    { "<leader>tm", desc = "Colorscheme" },
+    { "<leader>tt", desc = "Treesitter" },
+    { "<leader>tv", desc = "Vertical terminal" },
 })

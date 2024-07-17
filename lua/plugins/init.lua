@@ -35,15 +35,6 @@ require("packer").startup(function(use)
     -- Nvterm
     use "NvChad/nvterm"
 
-    -- alpha
-    -- use {
-    --     'goolord/alpha-nvim',
-    --     requires = { 'kyazdani42/nvim-web-devicons' },
-    --     config = function ()
-    --         require'alpha'.setup(require'alpha.themes.startify'.config)
-    --     end
-    -- }
-
     -- Themes
     use "projekt0n/github-nvim-theme"
     use 'doki-theme/doki-theme-vim'
@@ -73,26 +64,9 @@ require("packer").startup(function(use)
 
     -- Copilot
     use 'github/copilot.vim'
-    
-    -- Live server
-    use({
-        "aurum77/live-server.nvim",
-        run = function()
-            require"live_server.util".install()
-        end,
-        cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
-    })
 
     -- Git signs
     use 'lewis6991/gitsigns.nvim'
-
-    -- Telescope
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
 
     -- Latex
     use 'lervag/vimtex'
@@ -122,24 +96,6 @@ require("packer").startup(function(use)
 
     -- Java lsp
     use 'mfussenegger/nvim-jdtls'
-
-    -- Tree
-    use "preservim/nerdtree"
-
-    -- install without yarn or npm
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
-
-    -- nvim tree
-    use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-      },
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
 
     -- Discord
     use 'andweeb/presence.nvim'

@@ -26,8 +26,9 @@ local servers = {
     -- "hls",
     "tsserver",
     "jdtls",
+    "vuels",
     "kotlin_language_server",
-    "rust_analyzer",
+    -- "rust_analyzer",
 }
 
 local function on_attach()
