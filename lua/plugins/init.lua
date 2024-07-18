@@ -29,6 +29,9 @@ require("packer").startup(function(use)
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
+    -- Nvim tree 
+    use 'nvim-tree/nvim-tree.lua'
+
     -- fsharp lsp
     use 'ionide/Ionide-vim'
 
@@ -45,6 +48,7 @@ require("packer").startup(function(use)
     use 'sainnhe/sonokai'
     use 'sainnhe/everforest'
     use 'sainnhe/edge'
+    use 'catppuccin/nvim'
 
     -- Bufferline
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}

@@ -18,7 +18,7 @@ vim.cmd [[
 
 -- Colorscheme
 vim.cmd [[
-    colorscheme tokyonight
+    colorscheme catppuccin-mocha
 ]]
 
 -- Transparent background

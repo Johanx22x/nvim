@@ -45,3 +45,6 @@ require("bufferline").setup{}
 
 -- Live servers
 require("plugins.live-server")
+
+-- Catppuccin theme 
+require("plugins.catppuccin")
