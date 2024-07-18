@@ -48,3 +48,6 @@ require("plugins.live-server")
 
 -- Catppuccin theme 
 require("plugins.catppuccin")
+
+-- Alpha
+require("plugins.alpha")

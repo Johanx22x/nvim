@@ -53,6 +53,9 @@ require("packer").startup(function(use)
     -- Bufferline
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+    -- Alpha
+    use {'goolord/alpha-nvim', requires = 'nvim-tree/nvim-web-devicons'}
+
     -- LSP
     use 'neovim/nvim-lspconfig'
 
