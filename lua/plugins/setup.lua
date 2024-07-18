@@ -41,7 +41,7 @@ require("plugins.nvchad-term")
 require("plugins.markdown-preview")
 
 -- Bufferline
-require("bufferline").setup{}
+require("plugins.bufferline")
 
 -- Live servers
 require("plugins.live-server")
