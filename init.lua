@@ -1,29 +1,23 @@
---[[
-     ██╗ ██████╗ ██╗  ██╗ █████╗ ███╗   ██╗██╗  ██╗██████╗ ██████╗ ██╗  ██╗
-     ██║██╔═══██╗██║  ██║██╔══██╗████╗  ██║╚██╗██╔╝╚════██╗╚════██╗╚██╗██╔╝
-     ██║██║   ██║███████║███████║██╔██╗ ██║ ╚███╔╝  █████╔╝ █████╔╝ ╚███╔╝ 
-██   ██║██║   ██║██╔══██║██╔══██║██║╚██╗██║ ██╔██╗ ██╔═══╝ ██╔═══╝  ██╔██╗ 
-╚█████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚████║██╔╝ ██╗███████╗███████╗██╔╝ ██╗
- ╚════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
-███╗   ██╗██╗   ██╗██╗███╗   ███╗     ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
-████╗  ██║██║   ██║██║████╗ ████║    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
-██╔██╗ ██║██║   ██║██║██╔████╔██║    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
-██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
-██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
-╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
---]]
+-- Leader key (must be set before lazy)
+vim.g.mapleader = "\\"
 
--- Load plugins
-require("plugins")
+-- Load editor options
+require("config.options")
 
--- General settings
-require("settings")
-
--- Load keybindings
-require("mappings")
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
 -- Setup plugins
-require("plugins.setup")
+require("lazy").setup("plugins")
 
--- LSP settings
-require("lsp")
+-- Load keymaps (after plugins)
+require("config.keymaps")

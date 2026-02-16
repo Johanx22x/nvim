@@ -1,124 +1,40 @@
---[[
-██████╗░██╗░░░░░██╗░░░██╗░██████╗░██╗███╗░░██╗░██████╗
-██╔══██╗██║░░░░░██║░░░██║██╔════╝░██║████╗░██║██╔════╝
-██████╔╝██║░░░░░██║░░░██║██║░░██╗░██║██╔██╗██║╚█████╗░
-██╔═══╝░██║░░░░░██║░░░██║██║░░╚██╗██║██║╚████║░╚═══██╗
-██║░░░░░███████╗╚██████╔╝╚██████╔╝██║██║░╚███║██████╔╝
-╚═╝░░░░░╚══════╝░╚═════╝░░╚═════╝░╚═╝╚═╝░░╚══╝╚═════╝░
---]]
+return {
+  -- Themes (lazy-loaded, activate via :colorscheme)
+  { "projekt0n/github-nvim-theme", lazy = true },
+  { "doki-theme/doki-theme-vim", lazy = true },
+  { "folke/tokyonight.nvim", lazy = true },
+  { "sainnhe/gruvbox-material", lazy = true },
+  { "cocopon/iceberg.vim", lazy = true },
+  { "morhetz/gruvbox", lazy = true },
+  { "sainnhe/sonokai", lazy = true },
+  { "sainnhe/everforest", lazy = true },
+  { "sainnhe/edge", lazy = true },
 
-vim.cmd "packadd packer.nvim"
+  -- Icons
+  "nvim-tree/nvim-web-devicons",
 
-local packer = require("packer")
+  -- Utilities
+  "tpope/vim-commentary",
+  "Pocco81/HighStr.nvim",
+  "chrisbra/Colorizer",
+  "aklt/plantuml-syntax",
+  "andweeb/presence.nvim",
+  "github/copilot.vim",
 
-packer.init({
-  git = {
-    clone_timeout = 600, -- Timeout, in seconds, for git clones
-  },
-  display = {
-    open_fn = function()
-      return require("packer.util").float({ border = "single" })
-    end,
-  },
-})
+  -- F#
+  "ionide/Ionide-vim",
 
-require("packer").startup(function(use)
-    -- Packer can manage itself
-    use "wbthomason/packer.nvim"
+  -- Snippets
+  "norcalli/snippets.nvim",
+  "SirVer/ultisnips",
+  "honza/vim-snippets",
 
-    -- Treesitter
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  -- Rust
+  "simrat39/rust-tools.nvim",
 
-    -- Nvim tree 
-    use 'nvim-tree/nvim-tree.lua'
+  -- Java
+  "mfussenegger/nvim-jdtls",
 
-    -- fsharp lsp
-    use 'ionide/Ionide-vim'
-
-    -- Nvterm
-    use "NvChad/nvterm"
-
-    -- Themes
-    use "projekt0n/github-nvim-theme"
-    use 'doki-theme/doki-theme-vim'
-    use 'folke/tokyonight.nvim'
-    use 'sainnhe/gruvbox-material'
-    use 'cocopon/iceberg.vim'
-    use 'morhetz/gruvbox'
-    use 'sainnhe/sonokai'
-    use 'sainnhe/everforest'
-    use 'sainnhe/edge'
-    use 'catppuccin/nvim'
-
-    -- Bufferline
-    use 'akinsho/bufferline.nvim'
-
-    -- Alpha
-    use {'goolord/alpha-nvim', requires = 'nvim-tree/nvim-web-devicons'}
-
-    -- LSP
-    use 'neovim/nvim-lspconfig'
-
-    -- Which key
-    use 'folke/which-key.nvim'
-
-    -- Rust analyzer
-    use 'simrat39/rust-tools.nvim'
-   -- use 'rust-lang/rust-analyzer'
-
-    -- Web devicons
-    use 'kyazdani42/nvim-web-devicons'
-
-    -- Copilot
-    use 'github/copilot.vim'
-
-    -- Git signs
-    use 'lewis6991/gitsigns.nvim'
-
-    -- Latex
-    use 'lervag/vimtex'
-
-    -- snippets
-    use 'norcalli/snippets.nvim'
-    use 'SirVer/ultisnips'
-    use 'honza/vim-snippets'
-
-    -- Lua
-    use {
-        "folke/todo-comments.nvim",
-        requires = "nvim-lua/plenary.nvim"
-    }
-
-    -- TypeScript lsp
-    use 'albingroen/nvim-lsp-typescript-config'
-
-    -- Color highlight
-    use 'Pocco81/HighStr.nvim'
-
-    -- Hex colors
-    use 'chrisbra/Colorizer'
-
-    -- vim commentary
-    use 'tpope/vim-commentary'
-
-    -- Java lsp
-    use 'mfussenegger/nvim-jdtls'
-
-    -- Discord
-    use 'andweeb/presence.nvim'
-
-    -- PlantUML syntax
-    use 'aklt/plantuml-syntax'
-
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
-    use 'L3MON4D3/LuaSnip'
-    use 'saadparwaiz1/cmp_luasnip'
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-end)
+  -- TypeScript
+  "albingroen/nvim-lsp-typescript-config",
+}
