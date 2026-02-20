@@ -25,9 +25,7 @@ return {
   "ionide/Ionide-vim",
 
   -- Snippets
-  "norcalli/snippets.nvim",
-  "SirVer/ultisnips",
-  "honza/vim-snippets",
+  "rafamadriz/friendly-snippets",
 
   -- Rust
   "simrat39/rust-tools.nvim",
