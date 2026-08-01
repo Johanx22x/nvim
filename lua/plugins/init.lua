@@ -22,7 +22,7 @@ return {
   "github/copilot.vim",
 
   -- F#
-  "ionide/Ionide-vim",
+  { "ionide/Ionide-vim", enabled = false },
 
   -- Snippets
   "rafamadriz/friendly-snippets",

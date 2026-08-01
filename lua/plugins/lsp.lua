@@ -29,27 +29,10 @@ return {
       flags = { debounce_text_changes = 150 },
     })
 
-    -- Lua (vim global + runtime path)
-    vim.lsp.config("lua_ls", {
-      settings = {
-        Lua = {
-          runtime = { version = "LuaJIT" },
-          diagnostics = { globals = { "vim" } },
-          workspace = { library = vim.api.nvim_get_runtime_file("", true) },
-          telemetry = { enable = false },
-        },
-      },
-    })
-
     -- Enable servers
     vim.lsp.enable({
       "gopls",
       "jedi_language_server",
-      "lua_ls",
-      "clangd",
-      "ts_ls",
-      "vuels",
-      "kotlin_language_server",
     })
   end,
 }
